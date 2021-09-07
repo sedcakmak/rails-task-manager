@@ -1,0 +1,7 @@
+<h2><%= @task.title %></h2>
+<p>Details: <%= @task.details %></p>
+<p>Task completed: <%=@task.completed %></p>
+
+<%= link_to "BACK TO TASKS", tasks_path %>
+<%= link_to "EDIT", edit_task_path(@task) %>
+<%= link_to "DELETE", task_path(@task), method: :delete, data: { confirm: "Delete #{@task.title.upcase} from your tasks list?" }, class: 'btn btn-primary' %>
